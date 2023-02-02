@@ -10,6 +10,7 @@ A web application template with fundamental security features out of the box.
 - [Table of Contents](#table-of-contents)
 - [A Secure Web Application Template (SWA)](#a-secure-web-application-template-swa)
   - [Security Features](#security-features)
+  - [App Screenshots](#app-screenshots)
   - [Why is Secure Web App useful?](#why-is-secure-web-app-useful)
   - [How to get started](#how-to-get-started)
     - [What you need](#what-you-need)
@@ -59,6 +60,13 @@ It has been developed by Computer Science & Engineering students within the cont
 - Protection against [cross-site request forgery (CSRF)](https://owasp.org/www-community/attacks/csrf)
 - Protection against [cross-site scripting (XSS)](https://owasp.org/www-community/attacks/xss/)
 - Web traffic over a [reverse proxy server](https://en.wikipedia.org/wiki/Reverse_proxy)
+
+## App Screenshots
+<div align="center" style="text-align: center; width: 60%; margin: 0 auto;">
+  <img src="./assets/media/index.png"/>
+  <br>
+  <img src="./assets/media/register-2fa.png"/>
+</div>
 
 ## Why is Secure Web App useful?
 It has been developed such in a way that anyone with entry-level knowledge to expert-level can benefit from it.
