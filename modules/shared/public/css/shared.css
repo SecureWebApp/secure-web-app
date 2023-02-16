@@ -1,0 +1,186 @@
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
+
+/** 
+style variables, include shared.css in your html file and they can be referred in other .css file too
+*/
+:root {
+    --color-white: #FBFBFB;
+    --color-pale-white: #e2e2e2;
+    --color-black: #000000cc;
+    --color-pale-black: #666666;
+    --color-blue: #18A0FB;
+    --color-light-blue: #46b3fc;
+    --color-th-red: #CF1820;
+    --color-th-pink: #AF368C;
+    --color-th-orange: #EC6525;
+
+    --font-family: "Montserrat", sans-serif;
+    --font-size: 16px;
+
+    --font-weight-light: 100;
+    --font-weight-regular: 300;
+    --font-weight-semi-bold: 400;
+    --fat-font-weight: 500;
+    --font-weight-bold: 600;
+
+    --card-padding: 2rem;
+    --card-border-radius: 12px;
+
+    --button-border-radius: 8px;
+    --button-font-weight: 1.2rem;
+
+    --form-border-radius: 6px;
+
+    --transition-duration: 0.4s;
+}
+
+/* global styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-family: var(--font-family);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+p { font-size: 1rem; }
+a { background: transparent; }
+
+input {
+    border: 2px solid var(--color-black);
+    border-radius: var(--form-border-radius);
+}
+
+/* layout styles */
+
+body {
+    max-width: 1100px;
+    margin-inline: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    flex: 1;
+    padding: 3rem 0 1rem 0;
+}
+
+.card {
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+}
+
+.logo img { 
+    scale: 0.86;
+}
+
+button {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    border-radius: var(--button-border-radius);
+    border: solid 3px var(--color-blue);
+    transition-duration: var(--transition-duration);
+}
+
+button:hover{
+    background-color: var(--color-white);
+    color: var(--color-blue);
+    cursor: pointer;
+}
+
+.authentication-button {
+    width: 130px;
+    height: 60px;
+    margin: 0px 75px;
+    font-size: var(--button-font-weight);
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.navbar {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+    align-self: flex-start;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navbar li {
+    transition-duration: 0.2s;
+    padding: 0.2rem;
+}
+
+.navbar li:hover {
+    cursor: pointer;
+}
+
+.navbar a {
+    font-size: 1.2rem;
+    font-weight: var(--fat-font-weight);
+    text-decoration: none;
+}
+
+.nav-item {
+    color: var(--color-blue);
+    border: 1px solid transparent;
+    border-radius: var(--form-border-radius);
+}
+
+.nav-item:hover{
+    color: var(--color-white);
+    background-color: var(--color-blue);
+}
+
+.logout {
+    color: var(--color-th-red);
+    border: 1px solid transparent;
+    border-radius: var(--form-border-radius);
+}
+
+.logout:hover {
+    color: var(--color-white);
+    background-color: var(--color-th-red);
+}
+
+.navbar a:hover {
+    color: inherit;
+}
+
+/* hide input field arrows for Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* hide input field arrows for Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

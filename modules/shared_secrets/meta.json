@@ -1,0 +1,5 @@
+{
+    "author": "SYP Team 09",
+    "version": "SNAPSHOT",
+    "description": "Utility module providing a basic interface for generating and sharing in-memory secrets within the application"
+}

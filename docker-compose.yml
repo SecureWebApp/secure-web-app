@@ -1,0 +1,78 @@
+# dedicated docker network for app components
+networks:
+  secureWebApp:
+    driver: bridge
+
+# docker containers to be created
+services:
+  express-session-db:
+    build:
+      context: ./bin/res
+      dockerfile: docker/db/Dockerfile
+    environment:
+      MYSQL_ROOT_PASSWORD: '$databaseRootPassword'
+      MYSQL_DATABASE: '$sessionDatabase'
+      MYSQL_USER: '$sessionDatabaseUser'
+      MYSQL_PASSWORD: '$sessionDatabasePassword'
+    restart: unless-stopped
+    volumes:
+      - express-session-db-config:/etc/mysql
+      - express-session-db-data:/var/lib/mysql
+      - ./bin/res/init_express_session_db.sql:/docker-entrypoint-initdb.d/express_init_session_db.sql
+    networks:
+      - secureWebApp
+    # fix for linux
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "$sessionDatabasePort:$databaseDockerPort"
+    #expose:
+      #- "3306"
+    depends_on:
+      - app-db
+
+  app-db:
+    build:
+      context: ./bin/res
+      dockerfile: docker/db/Dockerfile
+    environment:
+      MYSQL_ROOT_PASSWORD: '$databaseRootPassword'
+      MYSQL_DATABASE: '$appDatabase'
+      MYSQL_USER: '$appDatabaseUser'
+      MYSQL_PASSWORD: '$appDatabasePassword'
+    restart: unless-stopped
+    volumes:
+      - app-db-config:/etc/mysql
+      - app-db-data:/var/lib/mysql
+      - ./bin/res/init_app_db.sql:/docker-entrypoint-initdb.d/init_app_db.sql
+    networks:
+      - secureWebApp
+    # fix for linux
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "$appDatabasePort:$databaseDockerPort"
+    #expose:
+      #- "3306"
+      
+  proxy_server:
+    build:
+      context: ./bin/res
+      dockerfile: docker/proxy_server/Dockerfile
+    ports:
+      - "$hostHTTPPort:$proxyHTTPPort"
+      - "$hostHTTPSPort:$proxyHTTPSPort"
+    networks:
+      - secureWebApp
+    # fix for linux
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+# mounts db data to container to prevent any data loss after a restart
+volumes:
+  app-db-config:
+  app-db-data:
+  express-session-db-config:
+  express-session-db-data:

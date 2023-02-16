@@ -1,0 +1,7 @@
+{
+    "author": "SYP Team 09",
+    "version": "SNAPSHOT",
+    "description": "Provides a simple login and register interface together with a dashboard",
+    "depends": ["authenticate", "hashing"],
+    "requires": ["csrf", "shared"]
+}

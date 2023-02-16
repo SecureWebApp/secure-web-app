@@ -1,0 +1,8 @@
+{
+    "author": "SYP Team 09",
+    "version": "SNAPSHOT",
+    "description": "This module provides a simple chat interface with user management",
+    "requires": ["shared"],
+    "depends": ["authenticate", "hashing"],
+    "prepends": ["login"]
+}

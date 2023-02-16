@@ -1,0 +1,6 @@
+{
+    "author": "SYP Team 09",
+    "version": "SNAPSHOT",
+    "description": "Catches all get requests not yet served and assumes the selected resource doesn't exist. Must be loaded as EARLY as possible so other modules can overwrite the 'get all' route of this module with their own routes and resources.",
+    "requires": ["shared"]
+}

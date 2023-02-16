@@ -1,0 +1,7 @@
+{
+    "author": "SYP Team 09",
+    "version": "SNAPSHOT",
+    "description": "Allows for express sessions to be stored in a mysql database",
+    "depends": ["session"],
+    "prepends": ["session.build"]
+}

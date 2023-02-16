@@ -1,0 +1,294 @@
+body {
+    background-color: var(--color-white);
+}
+
+header {
+    margin: 2em 0 1em 0;
+}
+
+main {
+    padding: 0 0 1rem 0;
+}
+
+
+/* Left Container */
+
+.msg-right .picture-content {
+    display: none;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 40%;
+    width: auto;
+    min-width: 350px;
+}
+
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border-color: var(--color-pale-black);
+    border-right: 2px outset;
+}
+
+.list-discussions {
+    display: flex;
+    flex-direction: column;
+    max-height: 600px;
+    overflow-y: auto;
+    scrollbar-color: var(--color-black) #e5eaf0fb;
+    scrollbar-width: thin;
+
+}
+
+.item-discussion {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #e5dcdc;
+    padding: 5px;
+    align-items: baseline;
+}
+
+.item-discussion .picture-contain {
+    margin-right: 5px;
+}
+
+
+.item-discussion:hover {
+    background-color: #e5dcdc;
+    cursor: pointer;
+}
+
+.header-discussion {
+    border-bottom: 1px solid var(--color-pale-black);
+}
+
+.menu-discussion {
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.description-menu {
+    padding: 0 0.7rem 0.7rem 0.7rem;
+}
+
+.menu-contain {
+    display: flex;
+    flex-direction: row;
+    padding: 0.7rem;
+}
+
+.profile-picture img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.picture-contain {
+    width: 30%;
+}
+
+.name-contain {
+    padding-top: 1rem;
+    align-items: center;
+}
+
+.chat-id .name-description {
+    padding-left: 0.8rem;
+}
+
+
+/* Right Container */
+
+.chat-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    border: 3px solid var(--color-black);
+    border-radius: var(--card-border-radius);
+}
+
+
+.message {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+    padding: 5px;
+    max-width: 40%;
+    width: auto;
+    min-width: 100px;
+}
+
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.right-container .header-message {
+    border-bottom: 1px solid #e5dcdc;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+    align-items: center;
+}
+
+.header-content .name-contain {
+
+    padding-left: 10px;
+
+}
+
+
+
+.container-message {
+    overflow-y: auto;
+    scrollbar-color: #0677f0 #e5eaf0fb;
+    scrollbar-width: thin;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #e5dcdc;
+    height: 100%;
+
+}
+
+.input-group {
+    padding: 17px;
+
+}
+
+
+.msg-right {
+
+    margin-left: 45%;
+    display: flex;
+    flex-direction: row;
+}
+
+.msg-right .picture-contain {
+
+    width: 30%;
+}
+
+.msg-right .message-content {
+
+    background-color: aliceblue;
+    width: 60%;
+
+}
+
+.msg-right .delete-content {
+
+    width: 10%;
+}
+
+.msg-left {
+
+    margin-right: 45%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+
+}
+
+.msg-left .picture-contain {
+
+    width: 30%;
+}
+
+.msg-left .message-content {
+
+    background-color: aqua;
+    width: 60%;
+}
+
+.msg-left .delete-content {
+
+    width: 10%;
+}
+
+
+
+
+.popup {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background: #3c3c3c80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup .delete-msg {
+    background: white;
+    border: #3c3c3c;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    gap: 10px;
+    min-height: 100px
+}
+
+.popup .popup-content {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex: 1;
+}
+
+.popup .popup-content img {
+    width: 24px;
+    height: 24px;
+}
+
+.popup .btn-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: end;
+}
+
+.popup .btn-actions button {
+    min-width: 82px;
+
+}
+
+.no-chat-selected {
+    background: #fff;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 4;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bolder;
+}

@@ -1,0 +1,5 @@
+{
+    "author": "SYP Team 09",
+    "version": "SNAPSHOT",
+    "description": "This module disables browser caching to avoid potential security leaks"
+}

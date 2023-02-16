@@ -1,0 +1,79 @@
+header {
+  justify-content: center;
+  margin: 2em 0 1em 0;
+}
+
+main {
+  padding: 0 0 1rem 0;
+}
+
+h3 {
+  text-align: center;
+  background-color: inherit;
+}
+
+p {
+  padding-top: 0.3rem;
+  text-align: center;
+}
+
+a {
+  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
+}
+
+a:hover {
+  color: var(--color-blue);
+}
+
+.authentication-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 520px;
+  margin-inline: auto;
+  background-color: var(--color-pale-white);
+}
+
+.authentication-card form {
+  background-color: inherit;
+}
+
+.authentication-card form label {
+  background-color: inherit;
+  display: flex;
+  margin: 25px 0 5px 0;
+  font-weight: var(--font-weight-bold);
+  font-size: 1.3rem;
+}
+
+.authentication-card form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid var(--color-black);
+  border-radius: 6px;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+.authentication-card button {
+  padding: 12px;
+  margin: 0px 75px;
+  font-size: var(--button-font-weight);
+  font-weight: var(--font-weight-semi-bold);
+  display: flex;
+  margin-top: 30px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+button:disabled,
+button[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+
+}
+
+.alert-warning {
+  background-color: transparent;
+}

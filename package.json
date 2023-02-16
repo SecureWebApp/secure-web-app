@@ -1,0 +1,37 @@
+{
+  "name": "secure-web-app-template",
+  "version": "0.0.1",
+  "description": "A template for a secure web application",
+  "main": "bin/Launch.js",
+  "scripts": {
+    "start": "node bin/Launch.js",
+    "postinstall": "node bin/Install.js",
+    "newModule": "node bin/GenerateModule.js",
+    "test": "node test/Test.js",
+    "devStart": "nodemon bin/Launch.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.nt.fh-koeln.de/gitlab/syp22/team09.git"
+  },
+  "author": "SYP Team 09",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-mysql-session": "^2.1.8",
+    "express-session": "^1.17.3",
+    "http-errors": "^2.0.0",
+    "mysql2": "^2.3.3",
+    "qrcode": "^1.5.1",
+    "readline-sync": "^1.4.10",
+    "speakeasy": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

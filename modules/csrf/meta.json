@@ -1,0 +1,7 @@
+{
+    "author": "SYP Team 09",
+    "version": "SNAPSHOT",
+    "description": "This module provides tools for preventing CSRF attacks.",
+    "depends": ["session.build"],
+    "requires": ["disable_cache"]
+} 

@@ -1,0 +1,6 @@
+{
+    "author": "SYP Team 09",
+    "version": "SNAPSHOT",
+    "description": "Builds the express session middleware.",
+    "depends": ["session", "shared_secret"]
+}

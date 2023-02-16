@@ -1,0 +1,7 @@
+{
+    "author": "SYP Team 09",
+    "version": "SNAPSHOT",
+    "description": "Two-factor Authentication Module for additional security step.",
+    "depends": ["csrf", "login"],
+    "requires": ["shared"]
+}

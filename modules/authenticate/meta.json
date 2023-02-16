@@ -1,0 +1,6 @@
+{
+    "author": "SYP Team 09",
+    "version": "SNAPSHOT",
+    "description": "The basic user authentication package. Should be loaded as early as possible but especially BEFORE any public resources are loaded",
+    "depends": ["session.build"] 
+}

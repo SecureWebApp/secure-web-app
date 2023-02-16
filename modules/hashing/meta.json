@@ -1,0 +1,5 @@
+{
+    "author": "SYP Team 09",
+    "version": "SNAPSHOT",
+    "description": "This module provides stub functions for hashing values. Note that this module on its own does not provide actual hash functions!"
+}

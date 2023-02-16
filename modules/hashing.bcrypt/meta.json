@@ -1,0 +1,6 @@
+{
+    "author": "SYP Team 09",
+    "version": "SNAPSHOT",
+    "description": "This module overwrites the default hashing stubs with bcrypt's hash functions.",
+    "depends": ["hashing"]
+}

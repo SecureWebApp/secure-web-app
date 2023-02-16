@@ -1,0 +1,22 @@
+header {
+   justify-content: center; 
+   margin: 2em 0 1em 0;
+}
+
+.authentication-button {
+  font-weight: var(--fat-font-weight);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  padding: 5.4rem 0 1rem 0;
+  border-radius: var(--box-border-radius);
+}
+
+.welcome-image {
+  display: flex;
+  justify-content: center;
+  padding-top: 6em;
+  scale: 0.7;
+}

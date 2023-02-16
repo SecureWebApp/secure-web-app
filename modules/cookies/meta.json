@@ -1,0 +1,7 @@
+{
+    "author": "SYP Team 09",
+    "version": "SNAPSHOT",
+    "description": "This module installs the express cookie-parser middlewhare to allow for cookie support.",
+    "depends": ["shared_secrets"],
+    "prepends": ["session.build"]
+}

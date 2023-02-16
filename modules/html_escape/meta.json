@@ -1,0 +1,6 @@
+{
+    "author": "SYP Team 09",
+    "version": "SNAPSHOT",
+    "description": "Automatically escapes any html received via http methods post, put and patch",
+    "depends": ["authenticate"]
+}

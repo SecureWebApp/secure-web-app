@@ -1,0 +1,66 @@
+header {
+  margin: 2em 0 1em 0;
+  background-color: white;
+}
+
+html {
+  background-color: white;
+}
+
+.logo {
+  background-color: inherit;
+}
+
+body {
+  background-color: white;
+}
+
+main {
+  background-color: white;
+}
+
+
+.container{
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image:nth-of-type(2){
+  flex-grow: 2;
+}
+.image:nth-of-type(1){
+  flex-grow: 1;
+}
+
+.text {
+  background-color: white;
+  text-align: center;
+  margin-top: 100px;
+}
+
+p{
+  font-weight: bold;
+  background: inherit;
+} 
+
+h4{
+  background: inherit;
+  text-align: center;
+} 
+
+a{
+  color: #2F80ED;
+}
+
+a:hover{
+  text-decoration: underline;
+}

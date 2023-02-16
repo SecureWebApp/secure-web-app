@@ -1,0 +1,23 @@
+{
+    "include": [
+        "relog",
+        "disable_cache",
+        "shared_secrets",
+        "cookies",
+        "session",
+        "proxy",
+        "mysql_session_store",
+        "session.build",
+        "authenticate",
+        "hashing",
+        "hashing.bcrypt",
+        "html_escape",
+        "error404",
+        "shared",
+        "csp",
+        "csrf",
+        "chat",
+        "login",
+        "2fa"
+    ]
+}

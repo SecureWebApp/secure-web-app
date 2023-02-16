@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/shared.css"/>
+    <link rel="stylesheet" href="/css/auth.css"/>
+    <title>SWA • Register</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <a href="/">
+              <img class="logo" src="/img/Logo.png" alt="Secure Web App">
+          </a>
+        </div>
+      </header>
+      <main>
+          <div class="card authentication-card">
+            <h3>Create an account</h3>
+            <form action="/register" method="post">
+                <label for="username">Username</label>
+                <input 
+                  type="text"
+                  id="username"
+                  name="username"
+                  required
+                  placeholder="Enter username"/>
+
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Enter email"/>
+
+                <label for="password">Password</label>
+                <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="Enter password"/>
+                <div class="alert alert-warning alert_class1"></div>
+
+                <label for="passwordVerfiy">Repeat Password</label>
+                <input
+                type="password"
+                id="passwordverify"
+                name="passwordverify"
+                required
+                placeholder="Repeat password"/>
+                <div class="alert alert-warning alert_class2"></div>
+
+                <button type="submit" id="create">Register</button>
+
+              <%- csrf[0] %>
+            </form>
+          </div>
+          <p>Already have an account? <a href="/login">Login here</a></p>
+      </main>
+    <script src="/js/register.js"></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+header {
+  justify-content: center;
+  margin: 2em 0 1em 0;
+  margin-inline: auto
+}
+
+main {
+  padding: 0 0 1rem 0;
+}
+
+h3 {
+  text-align: center;
+  background-color: inherit;
+}
+
+p {
+  background-color: transparent;
+  padding-top: 0.3rem;
+  text-align: center;
+}
+
+a {
+  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
+}
+
+a:hover {
+  color: var(--color-blue);
+}
+
+.authentication-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 520px;
+  margin-inline: auto;
+  background-color: var(--color-pale-white);
+}
+
+.authentication-card img {
+  display: flex;
+  flex-direction: column;
+  margin: 1.2rem 0 0 0;
+  margin-inline: auto;
+}
+
+.authentication-card form {
+  background-color: inherit;
+}
+
+.authentication-card form label {
+  background-color: inherit;
+  display: flex;
+  margin: 25px 0 5px 0;
+  font-weight: var(--font-weight-bold);
+  font-size: 1.3rem;
+}
+
+.authentication-card form input {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-inline: auto;
+  margin-top: 1.2rem;
+  padding: 0.5rem;
+  outline: none;
+  font-size: 1.2rem;
+  width: 40%;
+}
+
+.authentication-card button {
+  background-color: var(--color-light-blue);
+  border: var(--color-light-blue);
+  padding: 12px;
+  margin: 0px 75px;
+  font-size: var(--button-font-weight);
+  font-weight: var(--font-weight-semi-bold);
+  display: flex;
+  margin-top: 30px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.authentication-card button.active {
+  background-color: var(--color-blue);
+  pointer-events: auto;
+}
+
+.alert-warning {
+  background-color: transparent;
+}
+
+.opt {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.85rem;
+  align-items: center;
+  background-color: transparent;
+}
+
+.opt input {
+  text-align: center;
+  border-radius: var(--button-border-radius);
+  font-weight: var(--fat-font-weight);
+}
