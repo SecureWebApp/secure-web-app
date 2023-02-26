@@ -2,13 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
 
 /** 
-style variables, include shared.css in your html file and they can be referred in other .css file too
+style variables, include shared.css in your html file and they can be referenced in other .css file too
 */
 :root {
     --color-white: #FBFBFB;
     --color-pale-white: #e2e2e2;
     --color-black: #000000cc;
     --color-pale-black: #666666;
+    --color-grey: #efefef;
+    --color-light-grey-sender-message-box: #e8f1f3;
     --color-blue: #18A0FB;
     --color-light-blue: #46b3fc;
     --color-th-red: #CF1820;
@@ -25,6 +27,7 @@ style variables, include shared.css in your html file and they can be referred i
     --font-weight-bold: 600;
 
     --card-padding: 2rem;
+    --card-padding-admin: 1rem;
     --card-border-radius: 12px;
 
     --button-border-radius: 8px;
@@ -80,6 +83,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin: 2em 0 0 0;
 }
 
 main {

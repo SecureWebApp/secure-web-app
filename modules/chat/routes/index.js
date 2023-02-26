@@ -14,11 +14,11 @@ router.get('/', (req, res, next) => {
     if (access.hasAdminAccess(req)) {
         logger.debug('Admin detected, rendering admin page')
         csrf(req, res)
-        res.render('adminchat')
+        res.render('admin-manage-chat')
     } else if (access.hasUserAccess(req)) {
         logger.debug('User detected, rendering user page')
         csrf(req, res)
-        res.render('userchat')
+        res.render('user-chat')
     } else 
         next()
 })

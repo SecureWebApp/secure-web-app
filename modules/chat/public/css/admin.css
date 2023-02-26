@@ -1,0 +1,70 @@
+body {
+    background-color: var(--color-white);
+}
+
+h1 {
+    text-align: center;
+}
+
+.accordion {
+    justify-content: center;
+    width: 520px;
+    max-width: 520px;
+    margin-inline: auto;
+    padding: var(--card-padding-admin);
+    background-color: var(--color-pale-white);;
+    border-radius: var(--card-border-radius);
+    border: solid 3px var(--color-black);
+}
+
+.accordion-header {
+    padding: 0.3em 0.1em;
+    background: inherit;
+}
+
+.accordion-item {
+    border-radius: var(--card-border-radius);
+    border-bottom: solid 2px var(--color-pale-black);
+    border-top: transparent;
+    background: inherit;
+}
+
+.accordion-button {
+    background: inherit;
+    border-radius: var(--card-border-radius);
+    font-size: 1.2rem;
+    font-weight: var(--fat-font-weight);
+}
+
+.accordion-button:hover {
+    background: transparent;
+}
+
+.accordion-button::after {
+    background-color: var(--color-pale-white);
+}
+
+.accordion-button.collapsed::after {
+    background-color: var(--color-pale-white);
+}
+
+.accordion-body {
+    background: var(--color-pale-white);
+}
+
+p {
+    background: var(--color-pale-white);
+}
+
+.delete {
+    background: var(--color-pale-white);
+}
+
+.btn-danger {
+    background: var(--color-th-red);
+}
+
+.btn-danger:hover {
+    background: var(--color-white);
+    color: var(--color-th-red);
+}

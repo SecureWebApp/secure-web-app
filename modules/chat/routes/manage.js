@@ -14,7 +14,7 @@ router.get('/', (req, res, next) => {
     if (access.hasAdminAccess(req)) {
         logger.debug('Admin: Rendering manage users page')
         csrf(req, res)
-        res.render('adminindex')
+        res.render('admin-manage-users')
     } else
         next()
 })

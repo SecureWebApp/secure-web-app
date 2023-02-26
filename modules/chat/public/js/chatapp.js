@@ -27,8 +27,8 @@ let localUser = [];
 /**
  * Get all users from database
  * Display the users as list
- * give evry user a data.id attribute to access it later
- * this function will be called directly when the page load
+ * give evrey user a data.id attribute to access it later
+ * this function will be called directly when the page is loaded
  * @see  'DOMContentLoaded' EventListener
  */
 //const getUsers = () => {
@@ -64,17 +64,15 @@ function getUsers() {
           localUser.push(d);
 
           userList.innerHTML += `
-        <li class="clearfix active">
-         <img src="/img/user.png" alt="avatar" />
-        <div class="about" data-id="${d.profile.profileId}">
-         <div class="name">${d.profile.userName}</div>
-   </div>
- </li>
+        <li class="people-menu" style="background-color:transparent;border-raidus:6px;">
+          <div class="about" data-id="${d.profile.profileId}">
+            <div class="name">${d.profile.userName}</div>
+          </div>
+        </li>
         `;
         });
       }
     })
-    //.then(getOwnProfile);
     .then(loadChats);
 }
 /**
@@ -99,7 +97,6 @@ function getOwnProfile() {
       csrf[0].value = data.csrf.value;
       activeUser.userId = data.userId;
     })
-    //.then(loadChats);
     .then(getUsers);
 }
 
@@ -156,7 +153,7 @@ const insertMessageinUI = (value) => {
     send.disabled = true;
   }
 };
-//create a Message and stroe it in the database
+//create a Message and store it in the database
 
 /**
  *  sendMessage is a function that sends a message to a specified recipient and update the ui with the message
@@ -211,8 +208,8 @@ const sendMessage = () => {
 };
 
 /**
- * Eventlistner, evry time the user click the send button
- * the sendMessage function will be called
+ * eventListener, whenever user clicks to "send" button
+ * sendMessage function will be called
  * @see sendMessage
  */
 send.addEventListener('click', sendMessage);
@@ -305,9 +302,9 @@ const getMessages = (data) => {
 //document.querySelector('#chats').addEventListener('click', loadData);
 
 /**
- * every list item has a id and can be clickable
- * after clicking on a user , the old messages should be loaded
- * and this specific user will be set as receiver
+ * every list item has an id and are clickable
+ * after clicking on a username, chat should be loaded
+ * and the selected user will be set as the receiver
  *
  */
 userList.addEventListener('click', (e) => {
@@ -318,11 +315,10 @@ userList.addEventListener('click', (e) => {
     localUser.forEach((d) => {
       if (d.userId == e.target.parentElement.dataset.id) {
         header.innerHTML = `<div class="col-lg-6">
-                    
-                    <div class="chat-about">
-                      <h6 class="m-b-0">${d.profile.userName}</h6>
-                    </div>
-                  </div>`;
+                              <div class="chat-about">
+                                <h6 class="m-b-0">${d.profile.userName}</h6>
+                              </div>
+                            </div>`;
         history.innerHTML = '';
       }
     });

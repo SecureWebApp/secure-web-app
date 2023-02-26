@@ -43,7 +43,7 @@ const getChats = () => {
       if (data.array.length === 0) {
         accordion.innerHTML = `
          <div class="warning-msg">
-          <h4>No chats are available <br> Please try again later</h4>
+          <h4 style="background:#e2e2e2;text-align:center;">No chat available <br> Please try again later</h4>
          </div>`;
       } else {
         const temporary = data.array.filter(
