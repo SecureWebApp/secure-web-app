@@ -88,7 +88,7 @@ A good starting point is to get SWA running before taking a look at how everythi
 
 Note: Please make sure you got the latest versions of nodejs, npm, docker and docker compose. Otherwise the build/launch might fail.
 
-Please refer to [nodejs](https://nodejs.org/) and [docker](https://www.docker.com/) about how to property install this software on your operating system. 
+Please refer to [nodejs](https://nodejs.org/) and [docker](https://www.docker.com/) about how to properly install this software on your operating system. 
 
 ### Installation
 
@@ -136,21 +136,23 @@ If you worked with express or similar frameworks before you likely already know 
 
 #### Routes
 
-To understand `routes` let's first talk about `paths`. A `path` refers to a location where something is located. If you open a web page and look at the url you will see something like `https://somepage.com/`**`example/thatOneFile.html`**. The part that is highlighted in **bold**? That is called a `path` and refers to a resource: A file called `thatOneFile.html`.
+To understand `routes` let's first talk about `paths`. A `path` refers to a location where something is located. If you open a web page and look at the url you will see something like 
+`https://somepage.com/`**`example/thatOneFile.html`**. The part that is highlighted in **bold**? That is called a `path` and refers to a resource: A file called `thatOneFile.html`.
+
 
 Now this is useful and all, but it's also a bit limiting in what you can do. Think about it, this `.html` file is 'finished', there is nothing we can really do with it. But what if we want to make a web application, something a lot more complex than a simple page?
 
 How about this? Once our server receives a request for **`example/thatOneRoute`**, instead of just stupidly responding with some file located at that `path`, we execute some code just for this one `route`, this code can then send whatever it wants to the client. This is the basic concept behind `routes`. 
 
-So now we got a request to our newly created `route` and we want to send a response page, but writing html in strings is a bit cumbersome, isn't there a better solution? Yes, that's were `views` come into play.
+So now we got a request to our newly created `route` and we want to send a response page, but writing HTML in strings is a bit cumbersome, isn't there a better solution? Yes, that's were `views` come into play.
 
 #### Views
 
-A `view` is really just an html file, or a file that can be turned into html by some sort of rendering engine. This view can then conveniently be sent by our code located at our `route` without needing to define long html in strings.
+A `view` is really just an HTML file, or a file that can be turned into HTML by some sort of rendering engine. This view can then conveniently be sent by our code located at our `route` without needing to define long HTML in strings.
 
-Now we could just send this html file and be done with it, but can we do more? One thing we lost by introducing `views` is the ability to customize our html freely to fit our needs just for this specific situation. To remedy this issue and get the best of both worlds we introduce another concept: `Template engines`.
+Now we could just send this HTML file and be done with it, but can we do more? One thing we lost by introducing `views` is the ability to customize our HTML freely to fit our needs just for this specific situation. To remedy this issue and get the best of both worlds we introduce another concept: `Template engines`.
 
-A template engine allows us to process our `view` before sending it to the client. We can, for instance, use this to insert an anti-csrf token into our html.
+A template engine allows us to process our `view` before sending it to the client. We can, for instance, use this to insert an anti-csrf token into our HTML.
 
 Our system uses [ejs](https://ejs.co/) by default, but other engines can be applied if needed.
 
@@ -241,7 +243,7 @@ A module function can also return a `Promise` which can later be resolved. This 
 
 ## How modules are implemented
 
-Now that we know what modules are it is time to learn how to properly implement a module. Let us first discuss what your core system offers to any module, in other words what our basic toolset is. We already know that express is part of it, but in addition to express the application offers a couple of services to aid in development.
+Now that we know what modules are, it is time to learn how to properly implement a module. Let us first discuss what your core system offers to any module, in other words what our basic toolset is. We already know that express is part of it, but in addition to express the application offers a couple of services to aid in development.
 
 ### Default services offered by the system
 
@@ -249,7 +251,7 @@ The following services can be accessed by all modules at all times:
 
 #### DataAccess
 
-The `DataAccess` service allows for interactions with an underlying mysql database. The connection specification used to connect to the mysql database server can be found in `.env` under `app database`. Note that these values should not be changed unless the deployment structure is  subject to change as well (for a more detailed breakdown of the deployment structure of the application see [Deployment](#deployment)).
+The `DataAccess` service allows for interactions with an underlying MySQL database. The connection specification used to connect to the MySQL database server can be found in `.env` under `app database`. Note that these values should not be changed unless the deployment structure is  subject to change as well (for a more detailed breakdown of the deployment structure of the application see [Deployment](#deployment)).
 
 `DataAccess` offers an interface called `db.js` located in [`src/database`](src/database/db.js), which can be imported using `require(process.database)`. 
 
@@ -336,13 +338,13 @@ Below is a list of all significant modules already included in the application (
 - `login`: A simple login module that can be extended or just used as is. This module provides a login and register interface to create a new user account.
   - `2fa`: This module is an extension of the `login` module and provides 2-factor authentication using an authenticator app like Authy or Google Authenticator.
 - `session`: This module, and it's child module `session.build` add the [express session](https://expressjs.com/en/resources/middleware/session.html) middleware to the application for client identification.
-  - `mysql_session_store`: This module changes the default in-memory session store of express session to one using mysql as storage backend.
+  - `mysql_session_store`: This module changes the default in-memory session store of express session to one using MySQL as storage backend.
 - `authenticate`: This module blocks access to all resources unless they are `public` or where manually whitelisted if the current session is not authenticated. Works well in combination with `login` to protect against sensitive resources being accessible despite not being auhtenticated.
 - `csp`: This module adds content-security-policy headers to all responses and provides an endpoint for csp violation reports.
 - `csrf`: This module provides tools to apply and validate anti-csrf tokens to protect against cross-site scripting attacks.
 - `hashing`: This module, and it's child module `hashing.bcrypt` provide secure hashing functions, which can be used to hash passwords and similar sensitive data.
 - `disable_cache`: This module adds headers to each response to prevent the browser from caching web pages, potentially leaking sensitive information.
-- `html_escape`: This module protects against html-based xss attacks by html-escaping all body parameters received in a request.
+- `html_escape`: This module protects against HTML-based xss attacks by HTML-escaping all body parameters received in a request.
 - `chat`: This module provides a simple chat system as an example on how this template can be used to build web applications.
 
 
@@ -356,21 +358,9 @@ SWA uses an apache2 web server as reverse proxy to communicate with the client. 
 
 SWA itself runs in an npm-managed nodejs environment.
 
-SWA uses two databases, one serves as the main storage area, the other is used by express to save session data. Both are reporesented as two different mysql server in two separate docker containers managed by docker compose.
+SWA uses two databases, one serves as the main storage area, the other is used by express to save session data. Both are reporesented as two different MySQL server in two separate docker containers managed by docker compose.
 
 
 # Maintenance & Contribution
 
-This project is conducted without considering a regular maintenance. However, we welcome feedback and PRs. 💫
-
-
-# Code of Conduct
-
-TODO for GitHub release
-
-
-<!-- # Useful Resources 
-Not neccessary, resources are linked in the text when fitting -->
-
-<!-- # Licsense 
-Not neccessary as a separate LICENSE file can be generated on GitHub --->
+This project is conducted without considering a regular maintenance. However, we welcome any feedback and pull requests. 💫
