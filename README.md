@@ -1,5 +1,5 @@
-<div align="center" style="text-align: center; max-width: 770px; margin: 0 auto;">
-  <img src="./assets/media/secureWebAppLogo.png"/>
+<div align="center" style="text-align: center; max-width: 640px; margin: 0 auto;">
+  <img src="./assets/media/SWA-Preview.png"/>
   <br>
 A web application template with fundamental security features out of the box.
 </div>
