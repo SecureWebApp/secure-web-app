@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.nt.fh-koeln.de/gitlab/syp22/team09.git"
+    "url": "https://github.com/SecureWebApp/secure-web-app.git"
   },
   "author": "SYP Team 09",
-  "license": "ISC",
+  "license": "GPL-3",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "colors": "^1.4.0",
